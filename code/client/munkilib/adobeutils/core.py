@@ -468,7 +468,7 @@ def run_adobe_cpp_pkg_script(dmgpath, payloads=None, operation='install'):
     tmpdir = tempfile.mkdtemp(prefix='munki-', dir='/tmp')
 
     # make our symlinks
-    for dir_name in ['ASU' 'ASU2', 'ProvisioningTool', 'uninstallinfo']:
+    for dir_name in ['ASU', 'ASU2', 'ProvisioningTool', 'uninstallinfo']:
         if os.path.isdir(os.path.join(basepath, dir_name)):
             os.symlink(os.path.join(basepath, dir_name),
                        os.path.join(tmpdir, dir_name))
